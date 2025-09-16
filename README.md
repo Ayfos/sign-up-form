@@ -16,6 +16,7 @@ Este proyecto es un formulario de registro moderno con validación de campos, de
    git clone https://github.com/Ayfos/sign-up-form.git
    ```
 2. Abre la carpeta en tu navegador y visualiza `index.html`.
+Visita el formulario de registro en vivo aquí: [Formulario en Vivo](https://ayfos.github.io/sign-up-form/)
 
 ## Créditos
 
