@@ -1,0 +1,201 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Norse Bold';
+    src: url('Norse-Bold.otf') format('opentype');
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(10, 10, 10, 0.5);
+    align-self: stretch;
+    margin-top: 120px
+}
+
+.logo-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    /* espacio arriba y abajo */
+}
+
+.logo-inner img {
+    width: 100px;
+    height: 130px;
+}
+
+.logo-inner span {
+    font-family: 'Norse Bold';
+    font-size: 90px;
+    color: white;
+}
+
+.credits {
+    font-size: 0.75rem;
+    /* más pequeño */
+    text-align: center;
+    /* centrado */
+    margin-bottom: 10px;
+    /* un poco de aire del borde */
+    color: white;
+}
+
+.credits a {
+    color: white;
+    text-decoration: none;
+    /* quita el subrayado */
+}
+
+.credits a:hover {
+    text-decoration: underline;
+    /* opcional: subrayado al pasar el ratón */
+}
+
+
+.sidebar {
+    background-image: url(halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+    padding: 20px 0;
+    color: white;
+    height: 100vh;
+}
+
+.content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: hsl(180, 6%, 97%);
+}
+
+.hero-text {
+    padding: 40px 50px;
+    background-color: hsl(180, 6%, 97%);
+    margin-bottom: 0;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.final-phrase {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-header {
+    padding: 20px 50px;
+    background-color: white;
+}
+
+.form-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    padding: 20px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.input-container {
+    flex-basis: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+input:focus {
+    border: 1px solid blue;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+
+button {
+    color: white;
+    background-color: #596D48;
+    border-radius: 5px;
+    padding: 10px 30px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.login-text a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-footer {
+    padding: 30px 50px;
+    margin-top: 0;
+    flex: 1;
+}
+
+/* CSS validación*/
+input:required:invalid:not(:placeholder-shown) {
+    border: 1px solid red;   /* rojo si escribo con not(placeholder-shows, evito que el navegador pinte de rojo por defecto, debido al required*/
+}
+
+input:required:valid {
+    border: 1px solid green;
+}
+
+input:focus:invalid:not(:placeholder-shown) {
+    border: 1px solid red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+input:focus:valid {
+    border: 1px solid green;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
